@@ -1,0 +1,15 @@
+<template>
+    <div>
+        <label>Email:</label>
+        <input type="text" onchange={handleInputChange} />
+        <button onclick={handleButtonClick}>Check for Duplicates</button>
+        <template if:true={showResult}>
+            <template if:true={isDuplicate}>
+                <p>This contact already exists.</p>
+            </template>
+            <template if:false={isDuplicate}>
+                <p>This is a new contact.</p>
+            </template>
+        </template>
+    </div>
+</template>
